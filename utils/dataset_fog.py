@@ -71,7 +71,7 @@ class dataset_fog(Dataset):
         # yolo中个检测层的锚框个数
         self.anchor_per_scale = cfg.YOLO.ANCHOR_PER_SCALE  # 3
         # 图片路径和图片中目标的annotation
-        self.annotations = np.array(self.load_annotations(dataset_type))[0:10]
+        self.annotations = np.array(self.load_annotations(dataset_type))
         # 样本个数
         self.num_samples = len(self.annotations)
 
