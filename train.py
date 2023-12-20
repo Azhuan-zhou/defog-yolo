@@ -68,10 +68,10 @@ def train():
     for epoch in range(cfg.epochs):
 
         # 训练
-        #train_loss = train_epoch(epoch, model, optimizer, dataloader, device)
+        train_loss = train_epoch(epoch, model, optimizer, dataloader, device)
         # 一个epoch结束
-        #print('Loss:{}'.format(train_loss / len(dataloader)))
-        #loss_epoch.append(train_loss / len(dataloader))
+        print('Loss:{}'.format(train_loss / len(dataloader)))
+        loss_epoch.append(train_loss / len(dataloader))
 
         # 评估
         if (epoch + 1) % cfg.evaluation_interval == 0:
