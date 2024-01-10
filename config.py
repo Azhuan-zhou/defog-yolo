@@ -1,6 +1,11 @@
 from easydict import EasyDict as edict
 
 __C = edict()
+# RTTS dataset
+__C.RTTS = edict()
+__C.RTTS.path = r'./dataset/RTTS_test.txt'
+__C.RTTS.INPUT_SIZE = [320, 352, 384, 416, 448, 480, 512, 544, 576, 608]
+__C.RTTS.BATCH_SIZE = 1
 __C.times = 'exp03'
 __C.MODEL = edict()
 # fog settings
